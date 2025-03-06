@@ -1,24 +1,16 @@
 #include "Queue.h"
-
+using namespace std;
 
 int main(){
-    Queue<int> arr(10);
-    arr.Push(55);
-    arr.Push(35);
-    std::cout << arr.Pop()<<"\n"<<arr.Pop();
+    Queue<int> q = Queue<int>(20);
+    q.Push(10);
+    q.Push(15);
+    //q.Pop();
+    q.Print();
+    cout<<q.Empty()<<endl;
+    cout<<q.Full()<<endl;
 
-    try {
-        std::cout <<"\n"<< arr.Pop();
-    }
-    catch(const char* a){
-        std::cout << a;
-    }
-    
-    arr.Push(54);
-    arr.Push(34);
-    std::cout <<"\n"<< arr.Pop()<<"\n"<<arr.Pop();
 
-    
 
     return 0;
 }
